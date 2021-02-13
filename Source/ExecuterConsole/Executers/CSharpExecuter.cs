@@ -1,4 +1,5 @@
 ﻿using CSharp;
+using CSharp.ThreadSynchronization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,39 @@ namespace ExecuterConsole.Executers
 {
     public class CSharpExecuter
     {
+        public static void MutexDemo()
+        {
+            var o = new MutexDemo();
+            o.Execute();
+        }
+
+        public static void AutoResetEventDemo()
+        {
+            var o = new AutoResetEventDemo();
+            o.Execute();
+        }
+
+        public static void ManualResetEventDemo()
+        {
+            var m = new ManualResetEventDemo();
+            m.Execute();
+        } 
+        public static void MonitorDemo()
+        {
+            var m = new MonitorDemo();
+            m.Execute();
+        }
+        public static void LockObjectDemo()
+        {
+            var l = new LockObjectDemo();
+            l.Execute();
+        }
+        public static void SemaphoreSlimDemo()
+        {
+            var s = new SemaphoreSlimDemo();
+            s.execute();
+        }
+
         static void FileDownloader()
         {
             Console.WriteLine($"-------------------------- Main Entry --------------------------on Thread - {Thread.CurrentThread.ManagedThreadId}, IsBGT : {Thread.CurrentThread.IsBackground}, isTPL : {Thread.CurrentThread.IsThreadPoolThread}");

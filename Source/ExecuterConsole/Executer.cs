@@ -9,7 +9,7 @@ namespace ExecuterConsole
         {
             #region CSharp
 
-
+            CSharpExecuter.MutexDemo();
 
             #endregion
 
