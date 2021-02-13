@@ -1,0 +1,11 @@
+﻿
+Find largest prime factor of a number
+
+Input: 6
+Output: 3
+Explanation
+Prime factor of 6 are- 2, 3
+Largest of them is '3'
+
+Input: 15
+Output: 5

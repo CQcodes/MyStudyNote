@@ -1,0 +1,12 @@
+﻿Find all divisors of a natural number
+
+Examples :
+
+ Input : n = 10       
+ Output: 1 2 5 10
+
+ Input:  n = 100
+ Output: 1 2 4 5 10 20 25 50 100
+
+ Input:  n = 125
+ Output: 1 5 25 125
