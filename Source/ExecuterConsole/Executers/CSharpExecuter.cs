@@ -1,48 +1,28 @@
 ﻿using CSharp;
+using CSharp.DesignPattern.FactoryPattern;
 using CSharp.ThreadSynchronization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 
 namespace ExecuterConsole.Executers
 {
     public class CSharpExecuter
     {
-        public static void MutexDemo()
-        {
-            var o = new MutexDemo();
-            o.Execute();
-        }
-
-        public static void AutoResetEventDemo()
-        {
-            var o = new AutoResetEventDemo();
-            o.Execute();
-        }
-
-        public static void ManualResetEventDemo()
-        {
-            var m = new ManualResetEventDemo();
-            m.Execute();
-        } 
-        public static void MonitorDemo()
-        {
-            var m = new MonitorDemo();
-            m.Execute();
-        }
-        public static void LockObjectDemo()
-        {
-            var l = new LockObjectDemo();
-            l.Execute();
-        }
-        public static void SemaphoreSlimDemo()
-        {
-            var s = new SemaphoreSlimDemo();
-            s.execute();
-        }
-
+        public static void Execute<T>() where T : ICSharp, new() => new T().Execute();
+        public static void KitchenThread() => new KitchenThread().Execute();
+        public static void FactoryPatternDemo() => new FactoryPatternDemo().Execute();
+        public static void VarvsDynamicvsObjectDemo() => new VarvsDynamicvsObject().Execute();
+        public static void EqualsMethodDemo() => new EqualsMethodDemo().Execute();
+        public static void InheritanceDemo() => new InheritanceDemo().Execute();
+        public static void MutexDemo() => new MutexDemo().Execute();
+        public static void AutoResetEventDemo() => new AutoResetEventDemo().Execute();
+        public static void ManualResetEventDemo() => new ManualResetEventDemo().Execute();
+        public static void MonitorDemo() => new MonitorDemo().Execute();
+        public static void LockObjectDemo() => new LockObjectDemo().Execute();
+        public static void SemaphoreSlimDemo() => new SemaphoreSlimDemo().execute();
+        public static void GenericDelegate() => GenericDelegates.GenericDelegateDemo();
         static void FileDownloader()
         {
             Console.WriteLine($"-------------------------- Main Entry --------------------------on Thread - {Thread.CurrentThread.ManagedThreadId}, IsBGT : {Thread.CurrentThread.IsBackground}, isTPL : {Thread.CurrentThread.IsThreadPoolThread}");
@@ -53,12 +33,6 @@ namespace ExecuterConsole.Executers
             Console.WriteLine($"-------------------------- Main Exit --------------------------on Thread - {Thread.CurrentThread.ManagedThreadId}, IsBGT : {Thread.CurrentThread.IsBackground}, isTPL : {Thread.CurrentThread.IsThreadPoolThread}");
             Console.ReadLine();
         }
-
-        static void GenericDelegate()
-        {
-            GenericDelegates.GenericDelegateDemo();
-        }
-
         static void AnonymousMethodDemo()
         {
             Anonymous a = new Anonymous();
@@ -94,7 +68,6 @@ namespace ExecuterConsole.Executers
             };
             videoEncoder.Encode(video);
         }
-
         static void Comparer()
         {
             var sComparer = new StudentComparer();
@@ -106,7 +79,6 @@ namespace ExecuterConsole.Executers
             Console.WriteLine($"{Utility<Student>.Max(s1, s2).FirstName}");
             Console.WriteLine($"{string.Join(',', allStudents.Select(s => s.rollNo + " => " + s.FirstName).ToList())}");
         }
-
         static void Inheritance()
         {
             Child cc = new Child();

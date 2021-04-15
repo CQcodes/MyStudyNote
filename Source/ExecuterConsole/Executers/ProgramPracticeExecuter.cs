@@ -7,6 +7,12 @@ namespace ExecuterConsole.Executers
 {
     public static class ProgramPracticeExecuter
     {
+        public static void FindMinimumCommonValueFromTwoArrays()
+        {
+            var findMinCommonValueInTwoArrays = new FindMinCommonValueInTwoArrays();
+            findMinCommonValueInTwoArrays.Execute();
+        }
+
         public static void Anagram()
         {
             var anagramObj = new Anagram();

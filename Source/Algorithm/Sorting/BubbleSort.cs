@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Algorithm
+namespace Algorithm.Sorting
 {
     public class BubbleSort
     {

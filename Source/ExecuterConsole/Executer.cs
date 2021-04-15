@@ -1,5 +1,8 @@
-﻿using ExecuterConsole.Executers;
-using System;
+﻿using Algorithm;
+using Algorithm.ArrayManipulation;
+using DataStructure.Stack;
+using DataStructure.LinkedList;
+using ExecuterConsole.Executers;
 
 namespace ExecuterConsole
 {
@@ -7,29 +10,13 @@ namespace ExecuterConsole
     {
         static void Main(string[] args)
         {
-            #region CSharp
+            //CSharpExecuter.KitchenThread();
 
-            CSharpExecuter.MutexDemo();
+            DataStructerExecuter.Execute<LinkedListDemo>();
 
-            #endregion
+            //ProgramPracticeExecuter.FindMinimumCommonValueFromTwoArrays();
 
-            #region DataStructure
-
-            //DataStructerExecuter.Tree();
-
-            #endregion
-
-            #region ProgramPractice
-
-            //ProgramPracticeExecuter.Anagram();
-
-            #endregion
-
-            #region Algorithm
-
-            //AlgorithmExecuter.BubbleSort();
-
-            #endregion
+            //AlgorithmExecuter.Execute<ReverseArray>();
         }
     }
 }
